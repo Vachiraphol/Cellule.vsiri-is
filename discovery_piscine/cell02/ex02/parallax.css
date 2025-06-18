@@ -1,0 +1,58 @@
+/* ตั้งค่าพื้นฐาน */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ภาพ parallax */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ใส่ภาพ */
+.parallax1 {
+    background-image: url('banana.jpg');
+}
+
+
+.parallax2 {
+    background-image: url('Monkey.jpg'); 
+}
+
+/* กล่องคั่นตรงกลาง */
+.section.black {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ข้อความที่อยู่ตรงกลาง */
+.text1 {
+    color: black;
+    font-size: 24px;
+    
+}
+
+.text2 {
+    color: white;
+    font-size: 24px;
+}
+
+.text3 {
+    color: black;
+    font-size: 24px;;
+}
+
