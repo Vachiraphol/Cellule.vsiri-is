@@ -1,36 +1,53 @@
+/* โครงสร้างเมนูหลัก */
 .menu {
-    list-style-type: none;
-    background-color: white;
-    overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: slategray;
+  display: flex;
 }
 
 .menu > li {
-    float: left;
-    position: relative;
+  position: relative;
+  padding: 15px 20px;
 }
 
 .menu > li > a {
-    display: block;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
+/* ซ่อน dropdown ไว้ก่อน */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    z-index: 1;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: lightgray;
+  min-width: 150px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 1000;
+}
+
+/* แสดง dropdown แค่ตอนเอาเมาท์วาง */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* สไตล์ของรายการใน dropdown */
+.dropdown-content li {
+  padding: 10px;
 }
 
 .dropdown-content li a {
-    display: block ;
-    padding: 12px 16px;
-    text-decoration: none;
-    color: slategray;
+  text-decoration: none;
+  color: black;
+  display: block;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.dropdown-content li:hover {
+  background-color: #ddd;
 }
