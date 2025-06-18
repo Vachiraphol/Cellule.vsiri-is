@@ -1,0 +1,29 @@
+      html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      height: 50vh;
+    }
+
+    .box {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+      font-size: 2vw;
+    }
+
+    .skyblue {
+      background-color: skyblue;
+    }
+
+    .tomato {
+      background-color: tomato;
+    }
