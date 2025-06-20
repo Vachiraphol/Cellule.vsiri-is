@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 02 - It's over 9000</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, select {
+      margin: 5px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Mini Calculator</h2>
+
+  <!-- ช่องใส่ตัวเลขซ้าย -->
+  <input type="text" id="left" placeholder="Left value" />
+
+  <!-- เลือกเครื่องหมาย -->
+  <select id="operator">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+  </select>
+
+  <!-- ช่องใส่ตัวเลขขวา -->
+  <input type="text" id="right" placeholder="Right value" />
+
+  <!-- ปุ่ม -->
+  <input type="submit" value="Try me!" onclick="calculate()" />
+
+  <script>
+    // คำสั่ง alert ทุก 30 วินาที
+    setInterval(() => {
+      alert("Please, use me...");
+    }, 30000);
+
+    function calculate() {
+      const left = document.getElementById("left").value;
+      const right = document.getElementById("right").value;
+      const op = document.getElementById("operator").value;
+
+      // แปลงค่าเป็นตัวเลข
+      const num1 = parseInt(left);
+      const num2 = parseInt(right);
+
+      // เช็คว่าเป็นตัวเลขบวกหรือไม่
+      if (isNaN(num1) || isNaN(num2) || num1 < 0 || num2 < 0) {
+        alert("Error :(");
+        return;
+      }
+
+      // กรณีหารหรือ mod ด้วยศูนย์
+      if ((op === "/" || op === "%") && num2 === 0) {
+        alert("It's over 9000!!");
+        console.log("It's over 9000!!");
+        return;
+      }
+
+      let result;
+      switch (op) {
+        case "+": result = num1 + num2; break;
+        case "-": result = num1 - num2; break;
+        case "*": result = num1 * num2; break;
+        case "/": result = num1 / num2; break;
+        case "%": result = num1 % num2; break;
+        default:
+          alert("Error :(");
+          return;
+      }
+
+      // แสดงผลลัพธ์
+      alert("Result: " + result);
+      console.log("Result: " + result);
+    }
+  </script>
+
+</body>
+</html>
